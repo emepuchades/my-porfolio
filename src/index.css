@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita el scroll de la página completa */
+  height: 100%;
+  width: 100%;
+}
+
+.spline-container {
+  width: 1000px;
+  height: 1000px;
+}
