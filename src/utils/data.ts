@@ -16,7 +16,22 @@ export const sections: Section[] = [
     description:
       "I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site, please contact me!",
     buttonText: "See Projects",
-    subsections: ["Trello clone", "barf barf", "landing", "Streamerle"],
+    subsections: [ { name: "Trello clone", description: "Es un clon de trello literal xD", image: '', tags: [
+      "React",
+      "Redux",
+      "Node",
+      "JavaScript",
+      "SASS",
+      "Firebase",
+    ]}, { name: "Barf", description: "Comida natural para perros", image: '', tags: [
+      "React",
+      "Redux",
+      "Firebase",
+    ]}, { name: "Streamle", description: "Adivina el streamerS", image: '', tags: [
+      "React",
+      "Redux",
+      "Firebase",
+    ]}],
   },
   {
     type: "contact",
