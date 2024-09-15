@@ -6,11 +6,13 @@ import {
   Linkedin,
   Instagram,
   ArrowDown,
+  Github
 } from "lucide-react";
 import Subsection from "./components/subsections/Subsection";
 import Section from "./components/section/Section";
 import { sections } from "./utils/data";
 import { createScrollToSection, useScrollHandler } from "./utils/utils";
+import logo from "./assets/logo.png";
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -94,6 +96,22 @@ function App() {
           rel="noopener noreferrer"
         >
           <Instagram className="w-6 h-6 text-black hover:text-purple-400" />
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github className="w-6 h-6 text-black hover:text-purple-400" />
+        </a>
+      </div>
+      <div className="fixed top-4 left-20 z-100 flex items-center space-x-4">
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={logo} className="logo-container" />
         </a>
       </div>
       {/* Section indicator */}
