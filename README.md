@@ -31,26 +31,26 @@ Ensure you have the following tools installed:
 
 1. **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/your-username/react-vite-tailwind-starter.git
-   cd react-vite-tailwind-starter
-   ```
+    ```bash
+    git clone https://github.com/your-username/react-vite-tailwind-starter.git
+    cd react-vite-tailwind-starter
+    ```
 
 2. **Install dependencies**:
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
 3. **Start the development server**:
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
 4. **Open your browser** to `http://localhost:5173` to see the app in action.
 
@@ -70,7 +70,6 @@ react-vite-tailwind-starter/
 └── vite.config.js     # Vite configuration
 └── tailwind.config.js # Tailwind configuration
 ```
-
 ## Available Scripts
 
 - **`npm run dev`**: Start the development server.
