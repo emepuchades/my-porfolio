@@ -21,19 +21,10 @@ function Projects() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-3 gap-4 md:h-[800px]">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} setSelectedProject={setSelectedProject} />
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
       </div>
-      <AnimatePresence>
-        {console.log('selectedProject', selectedProject)}
-        {selectedProject && (
-          <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
-        )}
-      </AnimatePresence>
     </section>
   );
 }
