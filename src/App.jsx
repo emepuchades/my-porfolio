@@ -1,20 +1,16 @@
-import Contact from "./pages/Contact";
-import Header from "./pages/Header";
-import Hero from "./pages/Hero";
-import Projects from "./pages/Projects";
-//import Success from "./pages/Success";
-import WorkExperience from "./pages/WorkExperience";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import ProjectModal from './components/ProjectModal'
 
-function App() {
+const App = () => {
   return (
-    <div className="bg-gradient-to-br from-purple-100 to-pink-100 min-h-screen">
-      <Header />
-      <Hero />
-      <Projects />
-      <WorkExperience />
-      <Contact />
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:id" element={<ProjectModal />} />
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App

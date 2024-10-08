@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { Image, Link, X } from "lucide-react";
+import { Link } from 'react-router-dom'
 import {
   imageHeightClasses,
-  projects,
   sizeClasses,
 } from "../utils/constants/project";
-import deBarfProject from "../assets/debarf.png";
-import { motion, AnimatePresence } from "framer-motion";
-import ProjectModal from "../components/ProjectModal";
 
 function ProjectCard({ project, index, setSelectedProject }) {
   const isSmallCard = project.size === "small";
@@ -32,12 +28,12 @@ function ProjectCard({ project, index, setSelectedProject }) {
       </div>
       <div className="bg-white flex-grow flex flex-col justify-between">
         <h3 className="text-lg font-semibold text-gray-800">{project.title}</h3>
-        <button
-          onClick={() => setSelectedProject(project)}
-          className="inline-block bg-purple-600 text-white px-4 py-2 rounded-full transition duration-150 ease-in-out text-sm text-center mt-auto"
+        <Link
+          to={`/project/${project.id}`}
+          className="inline-block bg-purple-600 text-white px-4 py-2 rounded-full transition duration-150 ease-in-out text-sm text-center mt-auto hover:bg-purple-700"
         >
           View Project
-        </button>
+        </Link>
       </div>
     </div>
   );
