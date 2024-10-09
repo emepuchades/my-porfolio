@@ -1,12 +1,12 @@
 import React from "react";
 import { Github, Instagram, Linkedin } from "lucide-react";
+import logo from '../assets/logo.png'
 
 function Header() {
   return (
-    <header className="bg-white py-4 px-6 flex justify-between items-center">
+    <header className="bg-white flex justify-between items-center pt-4 px-8 sm:px-6 lg:px-8">
       <div className="flex items-center">
-        <span className="text-4xl font-bold text-purple-600 mr-2">M</span>
-        <span className="text-2xl font-semibold">aria</span>
+        <img src={logo} className="w-32 h-14"/>
       </div>
       <nav>
         <ul className="flex space-x-4">
