@@ -3,9 +3,9 @@ import { Link } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 
 const experienceItems = [
-  { number: "01", title: "Web UI/UX Design", link: "#" },
-  { number: "02", title: "Product Design", link: "#" },
-  { number: "03", title: "Graphics Design", link: "#" },
+  { number: "01", title: "Indra", link: "#" },
+  { number: "02", title: "Finametrix", link: "#" },
+  { number: "03", title: "Dide", link: "#" },
 ];
 
 function WorkExperience() {
@@ -15,9 +15,9 @@ function WorkExperience() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              12+ Years Of
+              8+ Years de
               <br />
-              Experience
+              experiencia
             </h2>
             <p className="text-sm mb-8 max-w-md">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -31,13 +31,13 @@ function WorkExperience() {
               </h3>
               <span className="text-sm">{experienceItems[0].number}</span>
             </div>
-            <Link
+            <a
               href={experienceItems[0].link}
               className="inline-flex items-center text-sm font-medium hover:underline"
             >
               Explore
               <ArrowUpRight className="ml-1 h-4 w-4" />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
@@ -47,13 +47,13 @@ function WorkExperience() {
                 <h3 className="text-xl font-semibold">{item.title}</h3>
                 <span className="text-sm">{item.number}</span>
               </div>
-              <Link
+              <a
                 href={item.link}
                 className="inline-flex items-center text-sm font-medium hover:underline"
               >
                 Explore
                 <ArrowUpRight className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </div>
           ))}
         </div>
