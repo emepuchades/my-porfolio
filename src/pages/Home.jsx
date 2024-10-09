@@ -8,7 +8,7 @@ import WorkExperience from "./WorkExperience";
 
 function Home() {
   return (
-    <div className="bg-gradient-to-br from-purple-100 to-pink-100 min-h-screen">
+    <div className="bg-white min-h-screen">
       <Header />
       <Hero />
       <Projects />

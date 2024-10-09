@@ -9,14 +9,19 @@ function Hero() {
       <div className="max-w-7xl w-full">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="lg:w-1/2 lg:pr-8 mb-12 lg:mb-0">
-            <img src={logo} />
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-800">
+            <div className="flex justify-center lg:justify-start mb-4">
+              <img
+                src={logo}
+                alt="Maria Puchades"
+              />
+            </div>
+            <h1 className="text-4xl sm:text-5xl justify-center lg:justify-start font-bold mb-4 text-gray-800">
               Maria Puchades
             </h1>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-purple-600">
+            <h2 className="text-xl sm:text-2xl justify-center lg:justify-start font-semibold mb-4 text-purple-600">
               Senior Frontend Engineer
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 mb-6">
+            <p className="text-base sm:text-lg lg:justify-start text-gray-600 mb-6">
               Resolving design problems, building smart user interfaces and
               useful interactions, developing rich web applications and seamless
               web experiences.
@@ -24,9 +29,6 @@ function Hero() {
             <button className="bg-purple-500 text-white font-bold py-2 px-6 rounded-full hover:bg-purple-600 transition duration-300">
               About me
             </button>
-            <div className="md:w-1/2 relative">
-              <div className="w-[150%] h-[400px] bg-gradient-to-r from-violet-200 to-pink-200 blur-3xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[-1]"></div>
-            </div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800 md:hidden">
             Skills
