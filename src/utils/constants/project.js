@@ -8,7 +8,7 @@ export const projects = [
     title: "Task Manager",
     image: mockTaskManager,
     link: "https://github.com/emepuchades/deBarf",
-    style: { height: "400px", width: "600px" }, // Define el objeto aquí, sin comillas
+    style: { height: "400px", width: "600px" },
     size: "large",
     description:
       "An online web application for address and guarantor verification",
@@ -22,7 +22,7 @@ export const projects = [
     id:'2',
     title: "Podcaster App",
     image: "/placeholder.svg?height=200&width=600",
-    style: { height: "200px", width: "600px" }, // Define el objeto aquí, sin comillas
+    style: { height: "200px", width: "600px" },
     link: "#",
     size: "wide",
     description:
@@ -37,7 +37,7 @@ export const projects = [
     id:'3',
     title: "debarf",
     image: mockDeBarfProject,
-    style: { height: "400px", width: "200px" }, // Define el objeto aquí, sin comillas
+    style: { height: "400px", width: "200px" },
     link: "#",
     size: "tall",
     description:
@@ -52,7 +52,7 @@ export const projects = [
     id:'4',
     title: "Streamerle",
     image: "/placeholder.svg?height=400&width=400",
-    style: { height: "400px", width: "400px" }, // Define el objeto aquí, sin comillas
+    style: { height: "400px", width: "400px" },
     link: "#",
     size: "medium",
     description:
@@ -67,7 +67,7 @@ export const projects = [
     id:'5',
     title: "femhack",
     image: "/placeholder.svg?height=200&width=200",
-    style: { height: "200px", width: "200px" }, // Define el objeto aquí, sin comillas
+    style: { height: "200px", width: "200px" },
     link: "#",
     size: "small",
     description:
@@ -82,7 +82,7 @@ export const projects = [
     id:'6',
     title: "HackatonMidudev toaxIA",
     image: "/placeholder.svg?height=200&width=200",
-    style: { height: "200px", width: "200px" }, // Define el objeto aquí, sin comillas
+    style: { height: "200px", width: "200px" },
     link: "#",
     size: "small",
     description:

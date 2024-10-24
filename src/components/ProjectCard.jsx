@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom'
 import {
   imageHeightClasses,
@@ -15,24 +15,28 @@ function ProjectCard({ project, index, setSelectedProject }) {
       }`}
     >
       <div
-        className={`relative ${isSmallCard ? "h-3/5" : "h-2/3"} ${
+        className={`relative bg-black ${isSmallCard ? "h-40 sm:h-48" : "h-48 sm:h-64"} ${
           imageHeightClasses[project.size]
         }`}
       >
         <img
           src={project.image}
           alt={project.title}
-          layout="fill"
-          objectFit="cover"
+          className="w-full h-full object-contain"
+          style={{
+            objectFit: 'scale-down',
+            maxHeight: '100%',
+            maxWidth: '100%',
+          }}
         />
       </div>
-      <div className="bg-white flex-grow flex flex-col justify-between">
-        <h3 className="text-lg font-semibold text-gray-800">{project.title}</h3>
+      <div className="bg-white flex-grow flex flex-col justify-between p-3 sm:p-5">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 line-clamp-2">{project.title}</h3>
         <Link
           to={`/project/${project.id}`}
-          className="inline-block bg-purple-600 text-white px-4 py-2 rounded-full transition duration-150 ease-in-out text-sm text-center mt-auto hover:bg-purple-700"
+          className="inline-block bg-purple-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full transition duration-150 ease-in-out text-xs sm:text-sm text-center mt-auto hover:bg-purple-700"
         >
-          View Project
+          Ver el proyecto
         </Link>
       </div>
     </div>

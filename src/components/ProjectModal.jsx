@@ -1,29 +1,40 @@
-import React from "react";
-import { useParams, Link } from 'react-router-dom'
+import React, {useEffect} from "react";
+import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Image, X, ArrowLeft, ArrowUpRight, Globe, Code, Database } from "lucide-react";
+import {
+  Image,
+  ArrowLeft,
+} from "lucide-react";
 import { projects } from "../utils/constants/project";
 
 function ProjectModal() {
-  const { id } = useParams()
-  const project = projects.find(p => p.id === id)
+  const { id } = useParams();
+  const project = projects.find((p) => p.id === id);
 
-  console.log('projects', projects)
-  console.log('project', project)
+  console.log("projects", projects);
+  console.log("project", project);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
-    return <div>Project not found</div>
+    return <div>Project not found</div>;
   }
 
   return (
-<div className="min-h-screen bg-white text-gray-900 p-6">
-      <div className="max-w-4xl mx-auto">
-        <Link to="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6">
+    <div className="min-h-screen bg-white text-gray-900 p-6">
+      <div className="max-w-6xl mx-auto">
+        <Link
+          to="/"
+          className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6"
+        >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back To Projects
         </Link>
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">{project.title}</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          {project.title}
+        </h1>
         <p className="text-xl mb-8">{project.description}</p>
 
         <div className="mb-8 rounded-lg overflow-hidden">
@@ -43,10 +54,15 @@ function ProjectModal() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Technologies</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Technologies
+          </h2>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">
+              <span
+                key={index}
+                className="px-3 py-1 bg-gray-800 text-white rounded-full text-sm"
+              >
                 {tech}
               </span>
             ))}
@@ -55,14 +71,24 @@ function ProjectModal() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Website</h2>
-          <a href={project.website} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+          <a
+            href={project.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300"
+          >
             {project.website}
           </a>
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Github</h2>
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300"
+          >
             {project.github}
           </a>
         </section>
@@ -76,7 +102,8 @@ function ProjectModal() {
           Open Project
         </a>
       </div>
-    </div>)
+    </div>
+  );
 }
 
 export default ProjectModal;

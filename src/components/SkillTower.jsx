@@ -28,7 +28,7 @@ export const SkillTower = ({ skill }) => {
           ))}
         </div>
         <div className="mt-4 text-center">
-          <div className={`${skill.color} mb-2`}>{skill.icon}</div>
+          <div className={`${skill.color} flex justify-center items-center mb-2`}>{skill.icon}</div>
           <span className="text-sm font-medium text-gray-800">{skill.name}</span>
           <span className="text-xs text-gray-600 block">
             Level {skill.level}/10
@@ -36,7 +36,7 @@ export const SkillTower = ({ skill }) => {
         </div>
         {hoveredIndex !== null && (
           <div className="absolute mt-2 bg-gray-800 text-white text-xs p-2 rounded">
-            {hoveredIndex < skill.level ? "Active Server" : "Inactive Server"}
+            {hoveredIndex < skill.level ? "Active server: skills deployed" : "Inactive server: skills in progress"}
           </div>
         )}
       </div>
