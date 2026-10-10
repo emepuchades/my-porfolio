@@ -1,0 +1,31 @@
+:root {
+  --bg: #050505;
+  --panel: #0a0a0a;
+  --black: #000;
+  --red: #e8100c;
+  --red-dark: #8f0906;
+  --red-soft: rgba(232, 16, 12, 0.25);
+  --red-line: rgba(232, 16, 12, 0.55);
+  --red-glow: rgba(232, 16, 12, 0.5);
+  --white: #f2f0ec;
+  --white-dim: #c9c6c0;
+  --white-muted: #b9b6b0;
+  --grey: #7a7a7a;
+  --green: #2fe86c;
+
+  --font-body: 'Archivo', sans-serif;
+  --font-display: 'Archivo Black', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-jp: 'Noto Sans JP', sans-serif;
+
+  --gap: 26px;
+  --page-width: 1180px;
+  --project-width: 1000px;
+  --gutter: 28px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --duration-press: 140ms;
+  --duration-hover: 180ms;
+  --duration-reveal: 700ms;
+}

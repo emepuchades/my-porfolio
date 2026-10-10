@@ -1,0 +1,22 @@
+.enter {
+  animation: enter 700ms var(--ease-out) var(--enter-delay, 0ms) both;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter {
+    animation-name: enterFade;
+  }
+
+  @keyframes enterFade {
+    from {
+      opacity: 0;
+    }
+  }
+}
