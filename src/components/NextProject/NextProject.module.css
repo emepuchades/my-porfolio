@@ -1,0 +1,52 @@
+.next {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 48px);
+  text-transform: uppercase;
+}
+
+.titleEnd {
+  color: var(--red);
+}
+
+.arrow {
+  margin-left: auto;
+  color: var(--red);
+  transition: transform 250ms var(--ease-out);
+}
+
+.next:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .next:hover .arrow {
+    transform: translateX(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    transition: none;
+  }
+}

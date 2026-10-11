@@ -1,0 +1,18 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 38px 0 30px;
+}
+
+.strip {
+  flex: 1;
+  height: 12px;
+  background: repeating-linear-gradient(-45deg, var(--red) 0 8px, transparent 8px 16px);
+}
+
+.chevron {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--red);
+}
