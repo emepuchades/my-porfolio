@@ -1,4 +1,4 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import BeforeAfterSection from '../../components/BeforeAfterSection/BeforeAfterSection';
 import Footer from '../../components/Footer/Footer';
 import HazardDivider from '../../components/HazardDivider/HazardDivider';
@@ -13,6 +13,7 @@ import SpecSheet from '../../components/SpecSheet/SpecSheet';
 import { fullName, githubUrl } from '../../data/profile';
 import { findProject, nextProject } from '../../data/projects';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import styles from './ProjectPage.module.css';
 
 const buildLinks = ({ demoUrl, codeUrl, isInDevelopment }) => {
@@ -28,7 +29,7 @@ export default function ProjectPage() {
   const project = findProject(projectId);
   useDocumentTitle(project && `${project.titleStart}${project.titleEnd} — ${fullName}`);
 
-  if (!project) return <Navigate to="/" replace />;
+  if (!project) return <NotFoundPage />;
 
   return (
     <>
