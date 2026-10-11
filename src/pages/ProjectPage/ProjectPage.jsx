@@ -1,4 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom';
+import BeforeAfterSection from '../../components/BeforeAfterSection/BeforeAfterSection';
 import Footer from '../../components/Footer/Footer';
 import HazardDivider from '../../components/HazardDivider/HazardDivider';
 import Highlights from '../../components/Highlights/Highlights';
@@ -41,6 +42,7 @@ export default function ProjectPage() {
           title={project.isInDevelopment ? '// Qué va a hacer' : '// Qué hace'}
           items={project.highlights}
         />
+        {project.beforeAfter && <BeforeAfterSection beforeAfter={project.beforeAfter} />}
         {project.gallery && <ProjectGallery images={project.gallery} />}
         <ProjectLinks links={buildLinks(project)} />
         <NextProject project={nextProject(project.id)} />
