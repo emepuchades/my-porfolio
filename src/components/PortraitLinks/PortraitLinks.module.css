@@ -1,0 +1,77 @@
+.row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  border-top: 2px solid var(--red);
+  background: var(--black);
+}
+
+.cell {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 17px 8px;
+  overflow: hidden;
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  isolation: isolate;
+  transition: color var(--duration-hover) ease;
+}
+
+.cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--red);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 220ms var(--ease-out);
+}
+
+.cell + .cell {
+  border-left: 1px solid var(--red-line);
+}
+
+.cell span {
+  color: var(--red);
+  transition: color var(--duration-hover) ease;
+}
+
+.cell:hover,
+.cell:focus-visible {
+  color: var(--black);
+}
+
+.cell:hover::before,
+.cell:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.cell:hover span,
+.cell:focus-visible span {
+  color: var(--black);
+}
+
+.cell:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: -4px;
+}
+
+.cell:active::before {
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cell::before {
+    transition: none;
+  }
+}
