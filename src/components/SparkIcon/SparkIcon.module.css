@@ -1,0 +1,71 @@
+.icon {
+  flex: none;
+  width: 1.15em;
+  height: 1.15em;
+  overflow: visible;
+}
+
+.main,
+.small {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.main {
+  fill: var(--red);
+  fill-opacity: 0;
+  stroke: var(--red);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  animation: draw 900ms var(--ease-in-out) calc(var(--enter-delay, 0ms) + 350ms) backwards;
+  transition:
+    transform 280ms var(--ease-out),
+    fill-opacity 200ms ease;
+}
+
+.small {
+  fill: var(--red);
+  animation: appear 400ms var(--ease-out) calc(var(--enter-delay, 0ms) + 1100ms) backwards;
+  transition: transform 280ms var(--ease-out);
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  [data-spark-trigger]:hover .main {
+    transform: rotate(90deg);
+    fill-opacity: 1;
+  }
+
+  [data-spark-trigger]:hover .small {
+    transform: scale(1.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main,
+  .small {
+    animation: none;
+    transition: fill-opacity 200ms ease;
+  }
+
+  [data-spark-trigger]:hover .main,
+  [data-spark-trigger]:hover .small {
+    transform: none;
+  }
+}

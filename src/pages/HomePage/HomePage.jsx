@@ -1,6 +1,9 @@
+import FeaturedCard from '../../components/FeaturedCard/FeaturedCard';
 import Hero from '../../components/Hero/Hero';
 import Nav from '../../components/Nav/Nav';
 import Portrait from '../../components/Portrait/Portrait';
+import RoleCard from '../../components/RoleCard/RoleCard';
+import StackCard from '../../components/StackCard/StackCard';
 import { cx } from '../../utils/cx';
 import styles from './HomePage.module.css';
 
@@ -14,6 +17,11 @@ export default function HomePage() {
         <Hero introDelay={INTRO_STEP_MS} />
         <div className={styles.mainGrid}>
           <Portrait introDelay={INTRO_STEP_MS * 2} />
+          <div className={styles.sideColumn}>
+            <RoleCard introDelay={INTRO_STEP_MS * 3} />
+            <FeaturedCard introDelay={INTRO_STEP_MS * 4} />
+            <StackCard introDelay={INTRO_STEP_MS * 5} />
+          </div>
         </div>
       </div>
     </div>

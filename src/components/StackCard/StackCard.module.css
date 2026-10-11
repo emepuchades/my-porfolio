@@ -1,0 +1,83 @@
+.card {
+  padding: 24px 28px;
+  background: var(--black);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(242, 240, 236, 0.25);
+}
+
+.japanese {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: var(--white);
+}
+
+.wall {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.column {
+  height: 170px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-display);
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--red);
+}
+
+.solid {
+  color: var(--red);
+  -webkit-text-stroke: 0;
+}
+
+.divider {
+  width: 1px;
+  background: rgba(242, 240, 236, 0.3);
+}
+
+.motto {
+  height: 170px;
+  writing-mode: vertical-rl;
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--white);
+}
+
+@media (min-width: 961px) {
+  .column,
+  .motto {
+    height: 140px;
+  }
+
+  .column {
+    font-size: 17px;
+  }
+}
