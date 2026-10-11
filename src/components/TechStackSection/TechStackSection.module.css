@@ -1,0 +1,17 @@
+.section {
+  margin: 70px auto;
+}
+
+.sheet {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  padding: 1px;
+  background: rgba(232, 16, 12, 0.45);
+}
+
+@media (max-width: 960px) {
+  .sheet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
