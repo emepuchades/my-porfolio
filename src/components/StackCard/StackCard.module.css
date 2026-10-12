@@ -72,12 +72,25 @@
 }
 
 @media (min-width: 961px) {
+  .card {
+    padding: clamp(14px, 2.4vh, 24px) 28px;
+  }
+
+  .head {
+    padding-bottom: clamp(8px, 1.2vh, 12px);
+    margin-bottom: clamp(10px, 1.6vh, 16px);
+  }
+
   .column,
   .motto {
-    height: 140px;
+    height: clamp(84px, 13vh, 140px);
   }
 
   .column {
-    font-size: 17px;
+    font-size: clamp(10px, 1.55vh, 17px);
+  }
+
+  .motto {
+    font-size: clamp(12px, 1.7vh, 15px);
   }
 }

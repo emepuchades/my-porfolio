@@ -60,12 +60,12 @@
   .hero {
     flex: none;
     width: 100%;
-    margin: 8px auto 22px;
-    padding: 24px 20px 20px;
+    margin: 8px auto clamp(14px, 2.4vh, 22px);
+    padding: clamp(14px, 2.6vh, 24px) 20px clamp(12px, 2.2vh, 20px);
   }
 
   .title {
-    font-size: clamp(34px, 5.6vw, 64px);
+    font-size: clamp(34px, min(5.6vw, 7.4vh), 64px);
   }
 
   .ghost {
