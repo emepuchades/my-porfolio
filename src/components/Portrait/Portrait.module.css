@@ -29,6 +29,22 @@
     auto;
 }
 
+.jpBox {
+  position: absolute;
+  top: 64px;
+  right: 24px;
+  z-index: 3;
+  padding: 14px 9px;
+  border: 2px solid var(--white);
+  background: rgba(0, 0, 0, 0.55);
+  writing-mode: vertical-rl;
+  font-family: var(--font-jp);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: var(--white);
+}
+
 .avatar {
   position: relative;
   z-index: 2;

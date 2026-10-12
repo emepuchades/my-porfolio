@@ -3,8 +3,26 @@
 }
 
 .card {
+  overflow: hidden;
   padding: 56px 36px;
   text-align: center;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 140px;
+  height: auto;
+  opacity: 0.14;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .watermark {
+    display: none;
+  }
 }
 
 .prompt {

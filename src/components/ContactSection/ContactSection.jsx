@@ -1,3 +1,4 @@
+import spiderUrl from '../../assets/decor/spider.svg';
 import { SECTION_IDS } from '../../data/navLinks';
 import { profile } from '../../data/profile';
 import { cx } from '../../utils/cx';
@@ -12,6 +13,7 @@ export default function ContactSection() {
       <SectionHeading titleStart="Con" titleEnd="tacto" tag="SAY HELLO" />
 
       <Reveal className={cx('frame', styles.card)}>
+        <img className={styles.watermark} src={spiderUrl} alt="" />
         <p className={styles.prompt}>// ¿Un proyecto, una duda, un hola?</p>
         {profile.email && (
           <a className={styles.mail} href={`mailto:${profile.email}`}>

@@ -8,6 +8,9 @@ export default function Portrait({ introDelay = 0 }) {
   return (
     <div className={cx('frame', 'enter', styles.portrait)} style={enterDelay(introDelay)}>
       <div className={styles.topo}>
+        <p className={styles.jpBox} lang="ja" title="¡Seré la Reina del Código!">
+          {profile.japanese.pirateKing}
+        </p>
         <img className={styles.avatar} src={profile.avatarSrc} alt={`Foto de ${fullName}`} />
       </div>
       <PortraitLinks />

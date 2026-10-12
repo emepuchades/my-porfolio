@@ -11,6 +11,7 @@ export const profile = {
   avatarSrc: '/avatar.webp',
   ghostWord: 'DEV',
   japanese: {
+    pirateKing: 'コードの王に、私はなる',
     role: 'フロントエンド',
     motto: '火コード',
   },
