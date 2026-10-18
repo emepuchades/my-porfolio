@@ -9,6 +9,7 @@ import ProjectHero from '../../components/ProjectHero/ProjectHero';
 import ProjectIntro from '../../components/ProjectIntro/ProjectIntro';
 import ProjectLinks from '../../components/ProjectLinks/ProjectLinks';
 import ProjectNav from '../../components/ProjectNav/ProjectNav';
+import StatusBar from '../../components/StatusBar/StatusBar';
 import SpecSheet from '../../components/SpecSheet/SpecSheet';
 import { fullName, githubUrl } from '../../data/profile';
 import { findProject, nextProject } from '../../data/projects';
@@ -33,6 +34,7 @@ export default function ProjectPage() {
 
   return (
     <>
+      <StatusBar isNarrow />
       <ProjectNav />
       <main className={styles.page}>
         <ProjectHero project={project} />
@@ -44,7 +46,7 @@ export default function ProjectPage() {
           items={project.highlights}
         />
         {project.beforeAfter && <BeforeAfterSection beforeAfter={project.beforeAfter} />}
-        {project.gallery && <ProjectGallery images={project.gallery} />}
+        {project.gallery && <ProjectGallery images={project.gallery} url={project.demoUrl} />}
         <ProjectLinks links={buildLinks(project)} />
         <NextProject project={nextProject(project.id)} />
       </main>

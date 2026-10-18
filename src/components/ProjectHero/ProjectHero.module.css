@@ -23,7 +23,7 @@
 
 .shot {
   position: relative;
-  width: min(84%, 760px);
+  width: min(84%, 980px);
   aspect-ratio: 16 / 9;
   margin: calc(var(--title-size) * -0.32) auto 0;
   border: 2px solid var(--red);

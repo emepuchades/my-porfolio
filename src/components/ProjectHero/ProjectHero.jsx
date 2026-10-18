@@ -1,9 +1,11 @@
 import { cx } from '../../utils/cx';
 import { enterDelay } from '../../utils/enterDelay';
+import { neonDelay } from '../../utils/neonDelay';
+import BrowserFrame from '../BrowserFrame/BrowserFrame';
 import styles from './ProjectHero.module.css';
 
 export default function ProjectHero({ project }) {
-  const { titleStart, titleEnd, summary, glyph, specs, cover } = project;
+  const { titleStart, titleEnd, summary, glyph, specs, cover, demoUrl } = project;
 
   return (
     <header className={cx('enter', styles.hero)} style={enterDelay(80)}>
@@ -14,12 +16,12 @@ export default function ProjectHero({ project }) {
       <div className={styles.title} aria-hidden="true">
         {titleStart}
       </div>
-      <div className={cx(styles.title, styles.outline)} aria-hidden="true">
+      <div className={cx(styles.title, styles.outline, 'neon')} style={neonDelay(500)} aria-hidden="true">
         {titleEnd}
       </div>
       <div className={styles.shot}>
         {cover ? (
-          <img className={styles.image} src={cover.src} alt={cover.alt} />
+          <BrowserFrame src={cover.src} alt={cover.alt} url={demoUrl} />
         ) : (
           <div className={styles.placeholder}>
             <span className={styles.glyph}>{glyph}</span>
