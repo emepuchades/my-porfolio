@@ -65,11 +65,11 @@
   }
 
   .title {
-    font-size: clamp(34px, min(5.6vw, 7.4vh), 64px);
+    font-size: clamp(34px, min(4.6vw, 8.6vh), 92px);
   }
 
   .ghost {
-    font-size: clamp(100px, 17vw, 210px);
+    font-size: clamp(100px, min(15vw, 26vh), 300px);
   }
 
   .subline {

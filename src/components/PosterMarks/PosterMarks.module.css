@@ -1,0 +1,61 @@
+.marks {
+  position: absolute;
+  inset: 14px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cross {
+  position: absolute;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--marks-color, var(--red));
+}
+
+.topLeft {
+  top: 0;
+  left: 0;
+}
+
+.topRight {
+  top: 0;
+  right: 0;
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+}
+
+.bottomRight {
+  bottom: 0;
+  right: 0;
+}
+
+.label {
+  position: absolute;
+  top: 1px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--marks-label, var(--white-muted));
+}
+
+.year {
+  left: 26px;
+}
+
+.code {
+  right: 26px;
+}
+
+.slashes {
+  color: var(--marks-color, var(--red));
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .slashes {
+    display: none;
+  }
+}
