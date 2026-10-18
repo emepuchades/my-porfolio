@@ -1,6 +1,7 @@
 import { profile } from '../../data/profile';
 import { cx } from '../../utils/cx';
 import { enterDelay } from '../../utils/enterDelay';
+import NeonSign from '../NeonSign/NeonSign';
 import styles from './RoleCard.module.css';
 
 export default function RoleCard({ introDelay = 0 }) {
@@ -12,8 +13,10 @@ export default function RoleCard({ introDelay = 0 }) {
         {specialtyStart} <b className={styles.highlight}>{specialtyEnd}</b>
       </div>
       <div className={styles.japanese}>
-        {profile.japanese.role}
-        <small className={styles.since}>DEVELOPER — EST. {profile.since}</small>
+        <span lang="ja">
+          <NeonSign text={profile.japanese.role} startDelay={800} step={70} />
+        </span>
+        <small className={styles.since}>DESARROLLADORA — DESDE {profile.since}</small>
       </div>
     </div>
   );

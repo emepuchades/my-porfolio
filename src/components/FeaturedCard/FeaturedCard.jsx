@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { featuredProjects, projectPath } from '../../data/projects';
 import { cx } from '../../utils/cx';
 import { enterDelay } from '../../utils/enterDelay';
+import { neonDelay } from '../../utils/neonDelay';
 import SparkIcon from '../SparkIcon/SparkIcon';
 import styles from './FeaturedCard.module.css';
 
@@ -16,7 +17,10 @@ export default function FeaturedCard({ introDelay = 0 }) {
     >
       <h2 className={styles.title}>
         <span className={styles.titleText}>
-          Proyectos <em className={styles.outline}>destacados</em>
+          Proyectos{' '}
+          <em className={cx(styles.outline, 'neon')} style={neonDelay(1000)}>
+            destacados
+          </em>
         </span>
         <SparkIcon className={styles.spark} />
       </h2>
