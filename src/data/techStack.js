@@ -1,22 +1,21 @@
 export const techStack = [
-  { name: 'JavaScript', area: 'FRONT' },
   { name: 'React', area: 'FRONT' },
-  { name: 'Redux', area: 'FRONT' },
-  { name: 'HTML & CSS', area: 'FRONT' },
-  { name: 'Ruby', area: 'BACK' },
-  { name: 'Rails', area: 'BACK' },
-  { name: 'Firebase', area: 'BACK' },
-  { name: 'AWS', area: 'BACK' },
-  { name: 'MongoDB', area: 'DATA' },
-  { name: 'MySQL', area: 'DATA' },
-  { name: 'Git', area: 'TOOLS' },
-  { name: 'Confluence', area: 'TOOLS' },
+  { name: 'Angular', area: 'FRONT' },
+  { name: 'TypeScript', area: 'FRONT' },
+  { name: 'JavaScript', area: 'FRONT' },
+  { name: 'React Native', area: 'MÓVIL' },
+  { name: 'Ruby on Rails', area: 'BACK' },
+  { name: 'Java · Spring', area: 'BACK' },
+  { name: 'Node.js', area: 'BACK' },
+  { name: 'Oracle', area: 'DATOS' },
+  { name: 'PostgreSQL', area: 'DATOS' },
+  { name: 'Claude API', area: 'IA' },
+  { name: 'Docker', area: 'HERRAMIENTAS' },
 ];
 
-export const stackWall = [
-  { label: 'React', isSolid: true },
-  { label: 'JavaScript', isSolid: false },
-  { label: 'Rails', isSolid: true },
-  { label: 'MySQL', isSolid: false },
-  { label: 'Firebase', isSolid: true },
+export const stackGroups = [
+  { area: 'Front', items: ['React', 'Angular'] },
+  { area: 'Móvil', items: ['React Native'] },
+  { area: 'Back', items: ['Ruby on Rails', 'Java'] },
+  { area: 'IA', items: ['Claude API', 'Agentes'] },
 ];

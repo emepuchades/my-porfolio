@@ -9,7 +9,7 @@ import styles from './TechStackSection.module.css';
 export default function TechStackSection() {
   return (
     <section id={SECTION_IDS.stack} className={styles.section}>
-      <SectionHeading titleStart="Tech " titleEnd="Stack" tag="TOOLS" />
+      <SectionHeading titleStart="Tech " titleEnd="Stack" tag="HERRAMIENTAS" />
 
       <Reveal className={cx('frame', styles.sheet)}>
         {techStack.map(({ name, area }, index) => (
