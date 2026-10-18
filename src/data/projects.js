@@ -65,17 +65,20 @@ export const projects = [
     ],
     beforeAfter: {
       before: { src: '/projects/task-manager/antes-tablero.webp', alt: 'Tablero del Task Manager en 2022' },
-      after: null,
+      after: {
+        src: '/projects/task-manager/despues-tablero.webp',
+        alt: 'Rehecho en 2026: diseño limpio, listas con color por estado, contador de tarjetas y menú lateral con tus proyectos.',
+      },
       startingPoint: [
         'Create React App como base.',
         'Cuatro librerías de interfaz a la vez: MUI 4, MUI 5, React Bootstrap y styled-components.',
         'Estado global con Redux y redux-persist.',
       ],
     },
-    cover: { src: '/projects/task-manager/antes-tablero.webp', alt: 'Tablero del Task Manager con listas y tarjetas' },
+    cover: { src: '/projects/task-manager/despues-tablero.webp', alt: 'Tablero del Task Manager rehecho en 2026' },
     gallery: [
-      { src: '/projects/task-manager/antes-login.webp', alt: 'Pantalla de inicio de sesión', label: 'Login' },
-      { src: '/projects/task-manager/antes-movil.webp', alt: 'Login en el móvil', label: 'Móvil', isTall: true },
+      { src: '/projects/task-manager/despues-inicio.webp', alt: 'Inicio con los proyectos y favoritos', label: 'Inicio' },
+      { src: '/projects/task-manager/despues-login.webp', alt: 'Pantalla de inicio de sesión', label: 'Login', isTall: true },
     ],
     demoUrl: 'https://task-manager-psi-two.vercel.app/',
     codeUrl: 'https://github.com/emepuchades/task-manager',
@@ -102,17 +105,20 @@ export const projects = [
     ],
     beforeAfter: {
       before: { src: '/projects/streamerle/antes-partida.webp', alt: 'Partida de Streamerle en 2022' },
-      after: null,
+      after: {
+        src: '/projects/streamerle/despues-partida.webp',
+        alt: 'Rehecho en 2026: modo oscuro, pistas por colores, barra de intentos y plataforma.',
+      },
       startingPoint: [
         'Create React App como base.',
         'Interfaz con React Bootstrap y estilos por defecto.',
         'Diseño sencillo en blanco y negro, sin estilo propio.',
       ],
     },
-    cover: { src: '/projects/streamerle/antes-partida.webp', alt: 'Partida de Streamerle con pistas por colores' },
+    cover: { src: '/projects/streamerle/despues-partida.webp', alt: 'Partida de Streamerle rehecho en 2026' },
     gallery: [
-      { src: '/projects/streamerle/antes-inicio.webp', alt: 'Pantalla de inicio con el buscador', label: 'Inicio' },
-      { src: '/projects/streamerle/antes-movil.webp', alt: 'Streamerle en el móvil', label: 'Móvil', isTall: true },
+      { src: '/projects/streamerle/despues-inicio.webp', alt: 'Pantalla de inicio con el buscador', label: 'Inicio' },
+      { src: '/projects/streamerle/despues-movil.webp', alt: 'Partida en el móvil', label: 'Móvil', isTall: true },
     ],
     demoUrl: 'https://streamerle.vercel.app/',
     codeUrl: 'https://github.com/emepuchades/streamerle',
