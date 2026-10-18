@@ -1,65 +1,61 @@
-.card {
+.ticket {
+  --corner: 16px;
+  --notch: 14px;
+  --stub: 118px;
+  --cut-x: calc(100% - var(--stub));
+  display: block;
   height: 100%;
+  color: var(--white);
+  text-decoration: none;
+  filter: drop-shadow(1.5px 0 0 var(--red)) drop-shadow(-1.5px 0 0 var(--red)) drop-shadow(0 1.5px 0 var(--red))
+    drop-shadow(0 -1.5px 0 var(--red)) drop-shadow(0 0 16px rgba(232, 16, 12, 0.22));
+  transition: transform 300ms var(--ease-out);
+}
+
+.paper {
+  --mask:
+    radial-gradient(circle at 0 0, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+    radial-gradient(circle at 100% 0, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+    radial-gradient(circle at 0 100%, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+    radial-gradient(circle at 100% 100%, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+    radial-gradient(circle at var(--cut-x) 0, #0000 var(--notch), #000 calc(var(--notch) + 0.5px)),
+    radial-gradient(circle at var(--cut-x) 100%, #0000 var(--notch), #000 calc(var(--notch) + 0.5px));
   display: flex;
-  flex-direction: column;
-  padding: 0;
-  transition:
-    transform 300ms var(--ease-out),
-    box-shadow 300ms var(--ease-out);
+  height: 100%;
+  min-height: 260px;
+  background:
+    linear-gradient(rgba(242, 240, 236, 0.035) 1px, transparent 1px) 0 0 / 100% 22px,
+    var(--panel);
+  -webkit-mask: var(--mask);
+  -webkit-mask-composite: source-in;
+  mask: var(--mask);
+  mask-composite: intersect;
 }
 
-.thumb {
-  position: relative;
-  height: 150px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--black);
-  border-bottom: 2px solid var(--red);
-}
-
-.glyph {
-  position: relative;
-  font-family: var(--font-display);
-  font-size: 64px;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--red);
-}
-
-.status {
-  position: absolute;
-  top: 10px;
-  left: 14px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--red);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.code {
-  position: absolute;
-  top: 10px;
-  right: 14px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--grey);
-  letter-spacing: 0.2em;
-}
-
-.body {
+.main {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 22px 22px 18px;
+  gap: 12px;
+  padding: 26px 30px 24px;
+}
+
+.topline {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--white-muted);
 }
 
 .title {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: clamp(30px, 3vw, 50px);
+  line-height: 0.95;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .titleEnd {
@@ -68,95 +64,205 @@
 
 .description {
   flex: 1;
-  font-size: 13.5px;
+  max-width: 62ch;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--white-muted);
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.fields {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+  margin: 4px 0 0;
+  border-top: 1px solid var(--red-line);
 }
 
-.tag {
-  padding: 4px 8px;
-  border: 1px solid var(--red);
-  color: var(--red);
+.field {
+  padding-top: 10px;
+}
+
+.field + .field {
+  padding-left: 16px;
+  border-left: 1px solid var(--red-line);
+}
+
+.field dt {
+  margin-bottom: 4px;
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.2em;
+  color: var(--red);
   text-transform: uppercase;
 }
 
-.foot {
+.field dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.stub {
+  position: relative;
+  flex: none;
+  width: var(--stub);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 22px;
-  border-top: 1px solid rgba(232, 16, 12, 0.4);
+  gap: 10px;
+  padding: 26px 0 22px;
   background: var(--black);
 }
 
-.barcode {
-  height: 22px;
-  width: 90px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--white) 0 1px,
-    transparent 1px 4px,
-    var(--white) 4px 7px,
-    transparent 7px 9px,
-    var(--white) 9px 10px,
-    transparent 10px 14px
-  );
+.stub::before {
+  content: '';
+  position: absolute;
+  top: var(--notch);
+  bottom: var(--notch);
+  left: 0;
+  width: 2px;
+  background: repeating-linear-gradient(180deg, var(--red) 0 7px, transparent 7px 13px);
 }
 
-.link {
+.serialLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--white-muted);
+}
+
+.serial {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1;
+  color: var(--red);
+}
+
+.barcode {
+  flex: 1;
+  width: 34px;
+  min-height: 60px;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--white) 0 2px,
+    transparent 2px 4px,
+    var(--white) 4px 5px,
+    transparent 5px 8px,
+    var(--white) 8px 11px,
+    transparent 11px 13px
+  );
+  opacity: 0.85;
+}
+
+.cta {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.18em;
-  color: var(--white);
-  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  transition: color var(--duration-hover) ease;
 }
 
 .arrow {
   display: inline-block;
+  color: var(--red);
   transition: transform 250ms var(--ease-out);
 }
 
-.link:hover,
-.link:focus-visible {
-  color: var(--red);
-}
-
-.link:focus-visible {
-  outline: 2px solid var(--red);
-  outline-offset: 3px;
+.ticket:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 6px;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .card:hover {
+  .ticket:hover {
     transform: translateY(-4px);
-    box-shadow:
-      0 0 0 1px rgba(232, 16, 12, 0.4),
-      0 14px 34px rgba(232, 16, 12, 0.18);
   }
 
-  .card:hover .arrow {
+  .ticket:hover .arrow {
     transform: translateX(4px);
   }
 }
 
+@media (max-width: 600px) {
+  .ticket {
+    --stub: 74px;
+  }
+
+  .paper {
+    --mask:
+      radial-gradient(circle at 0 0, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+      radial-gradient(circle at 100% 0, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+      radial-gradient(circle at 0 100%, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+      radial-gradient(circle at 100% 100%, #0000 var(--corner), #000 calc(var(--corner) + 0.5px)),
+      radial-gradient(circle at 0 calc(100% - var(--stub)), #0000 var(--notch), #000 calc(var(--notch) + 0.5px)),
+      radial-gradient(circle at 100% calc(100% - var(--stub)), #0000 var(--notch), #000 calc(var(--notch) + 0.5px));
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 22px 22px 20px;
+  }
+
+  .stub {
+    width: auto;
+    height: var(--stub);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 26px;
+  }
+
+  .stub::before {
+    top: 0;
+    bottom: auto;
+    left: var(--notch);
+    right: var(--notch);
+    width: auto;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--red) 0 7px, transparent 7px 13px);
+  }
+
+  .serialLabel {
+    display: none;
+  }
+
+  .serial {
+    font-size: 26px;
+  }
+
+  .barcode {
+    flex: 1;
+    height: 30px;
+    min-height: 0;
+    max-width: 120px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--white) 0 2px,
+      transparent 2px 4px,
+      var(--white) 4px 5px,
+      transparent 5px 8px,
+      var(--white) 8px 11px,
+      transparent 11px 13px
+    );
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .field + .field {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .card,
+  .ticket,
   .arrow {
     transition: none;
   }
 
-  .card:hover {
+  .ticket:hover {
     transform: none;
   }
 }

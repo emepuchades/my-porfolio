@@ -18,7 +18,7 @@ export default function ProjectsSection() {
 
   return (
     <section id={SECTION_IDS.projects} className={styles.section}>
-      <SectionHeading titleStart="Pro" titleEnd="yectos" tag="SELECTED WORK" />
+      <SectionHeading titleStart="Pro" titleEnd="yectos" tag="SELECCIÓN" />
 
       <div id={GRID_ID} className={styles.grid}>
         {visibleProjects.map((project, index) => (
