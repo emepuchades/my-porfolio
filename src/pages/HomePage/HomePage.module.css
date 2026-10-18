@@ -19,6 +19,10 @@
     overflow: hidden;
   }
 
+  .screen > :first-child {
+    flex: none;
+  }
+
   .screenBody {
     flex: 1;
     display: flex;
@@ -40,11 +44,23 @@
   }
 }
 
+@media (min-width: 961px) and (max-height: 820px) {
+  .sideColumn {
+    gap: clamp(10px, 1.5vh, 14px);
+  }
+}
+
 @media (min-width: 961px) and (max-height: 740px) {
   .screen {
     height: auto;
     min-height: 100vh;
     overflow: visible;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainGrid {
+    grid-template-columns: 0.9fr 1.1fr;
   }
 }
 

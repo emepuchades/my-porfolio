@@ -1,0 +1,43 @@
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 7px var(--gutter);
+  border-bottom: 1px solid var(--red-soft);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.narrow {
+  max-width: var(--project-width);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red-glow);
+}
+
+.time {
+  color: var(--white);
+}
+
+@media (min-width: 961px) and (max-height: 820px) {
+  .bar {
+    padding-block: 3px;
+  }
+}

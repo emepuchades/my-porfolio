@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import HangingSpider from '../../components/HangingSpider/HangingSpider';
 import ProjectNav from '../../components/ProjectNav/ProjectNav';
+import StatusBar from '../../components/StatusBar/StatusBar';
 import { fullName } from '../../data/profile';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import { cx } from '../../utils/cx';
@@ -12,6 +13,7 @@ export default function NotFoundPage() {
 
   return (
     <>
+      <StatusBar isNarrow />
       <ProjectNav backTo="/" backLabel="Inicio" />
       <main className={styles.page}>
         <section className={cx('frame', 'enter', styles.card)}>

@@ -7,6 +7,7 @@ import Portrait from '../../components/Portrait/Portrait';
 import ProjectsSection from '../../components/ProjectsSection/ProjectsSection';
 import RoleCard from '../../components/RoleCard/RoleCard';
 import StackCard from '../../components/StackCard/StackCard';
+import StatusBar from '../../components/StatusBar/StatusBar';
 import TechStackSection from '../../components/TechStackSection/TechStackSection';
 import { cx } from '../../utils/cx';
 import styles from './HomePage.module.css';
@@ -17,6 +18,7 @@ export default function HomePage() {
   return (
     <>
       <div className={styles.screen}>
+        <StatusBar />
         <Nav />
         <div className={cx('wrap', styles.screenBody)}>
           <Hero introDelay={INTRO_STEP_MS} />
