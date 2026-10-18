@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="wrap">
       <div className={styles.footer}>
         <span>
-          DESIGN CREATED BY <b className={styles.name}>{fullName.toUpperCase()}</b> — © {year}
+          DISEÑO DE <b className={styles.name}>{fullName.toUpperCase()}</b> — © {year}
         </span>
         <a className={styles.backToTop} href="#">
           Volver arriba <span aria-hidden="true">↑</span>

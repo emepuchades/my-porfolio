@@ -10,11 +10,10 @@ import styles from './ContactSection.module.css';
 export default function ContactSection() {
   return (
     <section id={SECTION_IDS.contact} className={styles.section}>
-      <SectionHeading titleStart="Con" titleEnd="tacto" tag="SAY HELLO" />
+      <SectionHeading titleStart="Con" titleEnd="tacto" tag="HABLEMOS" />
 
       <Reveal className={cx('frame', styles.card)}>
         <img className={styles.watermark} src={spiderUrl} alt="" />
-        <p className={styles.prompt}>// ¿Un proyecto, una duda, un hola?</p>
         {profile.email && (
           <a className={styles.mail} href={`mailto:${profile.email}`}>
             {profile.email}
