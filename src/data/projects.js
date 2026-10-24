@@ -80,7 +80,7 @@ export const projects = [
       { src: '/projects/task-manager/despues-inicio.webp', alt: 'Inicio con los proyectos y favoritos', label: 'Inicio' },
       { src: '/projects/task-manager/despues-login.webp', alt: 'Pantalla de inicio de sesión', label: 'Login', isTall: true },
     ],
-    demoUrl: 'https://task-manager-psi-two.vercel.app/',
+    demoUrl: 'https://task-manager-mp.vercel.app/',
     codeUrl: 'https://github.com/emepuchades/task-manager',
   },
   {
